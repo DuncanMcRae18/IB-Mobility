@@ -11,7 +11,7 @@ This folder contains the scripts, plots and a limited amout of data which should
 ├── plot
 └── scripts
 
-*data:* Any files that were small enough to push to github were placed in here  
+*data:* Any files that were small enough to push to github were placed in here.
 *docs:* All of my sources, reference data, etc.  
 *envs:* Contain the python environment details, created from both my environment and the approximate environment of a previous researcher Fatemeh Mousavi Karimi. Her environment is preserverd primarily caused by an issue in the package versions.  
 *fossil:* a fossil repository containing my version of the Simudo software with minor adjustments made to parameters in order to ensure the Newton solver converged.  
