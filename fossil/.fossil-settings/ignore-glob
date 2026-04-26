@@ -1,0 +1,14 @@
+*.pyc
+*__pycache__*
+out/*
+data/sentaurus/
+*~
+*.h5
+*.xdmf
+*.pvd
+*.vtu
+*.pvsm
+doc/build/
+build/
+dist/
+*.egg-info/

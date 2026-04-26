@@ -1,0 +1,13 @@
+numpy
+scipy
+pandas
+Pint
+atomicwrites
+matplotlib
+mpl_render
+yamlordereddictloader
+suffix_trees
+generic_escape
+sortedcontainers
+cached_property
+petsc4py
