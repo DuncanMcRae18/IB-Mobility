@@ -1,7 +1,10 @@
 import pint
 import os
 
-# 1. The exact path to YOUR local Simudo constants file
+"""this file is to demonstrate the problem that Fatemeh had with her versions. If run
+with the /home/duncan/data/repo/envs/fatemeh_env_full.yml environment, with version 0.9
+and 0.10.1 of pint it will print two different values for the permiability of free space."""
+
 constants_file = "/home/duncan/Documents/School/Current Semester/Physics Project/Main/test/fossil/build/lib/simudo/util/pint/constants_en.txt"
 
 print(f"Testing Pint {pint.__version__}")

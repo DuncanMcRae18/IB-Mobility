@@ -4,11 +4,10 @@ import pandas as pd
 import yaml
 
 # sources
-duncan_dir = '/home/duncan/data/main/data/duncan'
-fatemeh_dir = '/home/duncan/data/fatemeh_mk'
-fatemeh_results_dir = '/home/duncan/data/main/database/Fatemeh_results.csv'
-archive_dir = '/home/duncan/data/main/archive'
-planck_db = '/home/duncan/data/main/database/planck.db'
+duncan_dir = '/home/duncan/data/repo/data/duncan'
+fatemeh_dir = '/home/duncan/data/repo/data/fatemeh'
+fatemeh_results_dir = '/home/duncan/data/repo/data/fatemeh_results.csv'
+planck_db = '/home/duncan/data/repo/data/duncan_results.db'
 
 def parse_yaml(p):
     with open(p,'r') as f:

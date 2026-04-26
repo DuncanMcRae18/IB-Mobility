@@ -25,8 +25,8 @@ Parameters described in source below and in ``fourlayer.py``
 
 """
 
-#from simudo.example.fourlayer.fourlayer import multiplex_setup, run
-from fourlayer import multiplex_setup, run  #uses local fourlayer
+
+from simudo.example.fourlayer.fourlayer import multiplex_setup, run
 from scipy.optimize import fminbound
 import shutil
 from datetime import datetime, date
@@ -53,18 +53,30 @@ __all__ = [
     "jv_curve",
 ]
 
+
 "Duncan's stuff"
-mu_I = 0.001
+
+
+"here is where I typically change my parameters. In order to reduce the runtime, remove certain multiplexed values where desired."
+mu_I = [1e-05, 0.0001, 1, 30, 100]
 sigma_opt_ci = [1e-13, 5e-13]
 sigma_opt_iv = [1e-13, 5e-13]
 CB_E = 1.67
 IB_E = [0.5897491798222907, 0.55447173, 0.49546686, 0.37576187]
-multiplex_keys = ["IB_E", "sigma_opt_ci", "sigma_opt_iv"]
+multiplex_keys = ["mu_I", "IB_E", "sigma_opt_ci", "sigma_opt_iv"]
 multiprocess = True
 processes = 8
-experiment_folder = Path("/home/duncan/data/main/data/duncan/Eg_1.67/mu_I_0.001")
-text = "Redoing Fatemeh's results with pint=0.18"
+
+"""I put this error here in case anyone tries to run this script without changing it.
+You need to change the path so it doesnt write to a strange folder."""
+error
+
+experiment_folder = Path("/home/duncan/data/repo/data/duncan/raw_data")
+text = "Whatever you want added as a message for future reference. I am notably very bad at this."
+
+
 "end of Duncan's stuff"
+
 
 # List of voltages to run
 V_exts = list(np.linspace(0, 1.5, 75+1))  # 75

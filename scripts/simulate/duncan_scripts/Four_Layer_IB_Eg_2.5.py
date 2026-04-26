@@ -25,8 +25,8 @@ Parameters described in source below and in ``fourlayer.py``
 
 """
 
-#from simudo.example.fourlayer.fourlayer import multiplex_setup, run
-from fourlayer_duncan import multiplex_setup, run  #uses local fourlayer
+"IMPORTANT: The local version of this file must be imported since I changed the step_size and stepper_rel_tol."
+from fourlayer_duncan import multiplex_setup, run
 from scipy.optimize import fminbound
 import shutil
 from datetime import datetime, date
@@ -53,18 +53,29 @@ __all__ = [
     "jv_curve",
 ]
 
+
 "Duncan's stuff"
+
+
 mu_I = [1e-5, 0.001, 1, 30, 100]
-sigma_opt_ci = 5e-13
+sigma_opt_ci = [1e-13, 5e-13]
 sigma_opt_iv = [1e-13, 5e-13]
 CB_E = 2.5
-IB_E = [0.9739149949131315, 0.9327205938861218, 0.8622691192926665]
-multiplex_keys = ["IB_E", "mu_I", "sigma_opt_iv"]
+IB_E = [0.9739149949131315, 0.9327205938861218, 0.8622691192926665, 0.710701104724266]
+multiplex_keys = ["mu_I", "IB_E", "sigma_opt_ci", "sigma_opt_iv"]
 multiprocess = True
-processes = 31
-experiment_folder = Path("/home/duncan/data/main/data/duncan/fillin_Eg_2.5")
-text = "Performing runs at Eg-2.5eV to fill in data."
+processes = 8
+
+"""I put this error here in case anyone tries to run this script without changing it.
+You need to change the path so it doesnt write to a strange folder."""
+error
+
+experiment_folder = Path("/home/duncan/data/repo/data/duncan/raw_data")
+text = "Whatever you want added as a message for future reference. I am notably very bad at this."
+
+
 "end of Duncan's stuff"
+
 
 # List of voltages to run
 V_exts = list(np.linspace(0, 2.2, 75+1))
