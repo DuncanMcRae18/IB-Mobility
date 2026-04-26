@@ -1,0 +1,191 @@
+# import necessary libraries
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+import EgEi_Efficiency as eff
+from matplotlib import pyplot as plt
+from scipy.optimize import differential_evolution, minimize
+from pint import UnitRegistry
+import numpy as np
+from concurrent.futures import ProcessPoolExecutor
+
+# Use constants from EgEi_Efficiency module
+u = eff.u
+eV = eff.eV
+T_sun = eff.T_sun
+T_cell = eff.T_cell
+
+def Optimize(E_g, E_i, int_max, T_cell, T_sun, fX):
+    # Calculate power input once
+    P_in = eff.power_input(T_sun, int_max, fX)
+
+    # set bounds for the minimize function
+    bounds = [(0.01 * E_g.m_as('eV'), 0.99 * E_g.m_as('eV'))]
+    
+    # expected value of u_cv
+    mean = 0.935 * E_g.m_as('eV')
+
+    # minimize negative efficiency using mean u_cv value
+    result = minimize(fun=lambda x: eff.efficiency(x, E_g, E_i, T_cell, T_sun, int_max, fX, P_in), # type: ignore
+        x0=[mean],
+        method='SLSQP',
+        bounds=bounds,
+        tol=1e-4)
+
+    # if no good result found, use initial guesses
+    if result.fun == 0 or not result.success:
+
+        # create initial guesses
+        guesses = np.linspace(0.8 * E_g.m_as('eV'), 0.99 * E_g.m_as('eV'), 20)
+
+        # create array for potential u_cv candidates
+        candidates = []
+
+        # evaluate efficiency at each guess
+        for g in guesses:
+            candidates.append((g, eff.efficiency([g], E_g, E_i, T_cell, T_sun, int_max, fX, P_in))) # type: ignore
+
+        # select best candidate
+        guess = sorted(candidates, key=lambda x: x[1])[0][0]
+
+        # perform minimization again with new guess
+        result = minimize(fun=lambda x: eff.efficiency(x, E_g, E_i, T_cell, T_sun, int_max, fX, P_in), # type: ignore
+            x0=[guess],
+            method='SLSQP',
+            bounds=bounds,
+            tol=1e-4)
+
+    # if still no good result found, use differential evolution
+    if result.fun == 0 or not result.success:
+        bounds = [(0.8 * E_g.m_as('eV'), 0.99 * E_g.m_as('eV'))]
+        # Differential evolution parameters optimized for this problem
+        result = differential_evolution(
+            func=lambda x: eff.efficiency(x, E_g, E_i, T_cell, T_sun, int_max, fX, P_in),   # type: ignore
+            bounds=bounds,
+            strategy='best1bin',
+            popsize=30,
+            tol=1e-4,
+            maxiter=200,
+            polish=True
+        )
+    
+    # check if optimization was successful
+    if result is not None and result.success and result.fun < 0:
+        print(f"Completed optimization for E_g={E_g.m_as('eV'):.2f}, E_i={E_i.m_as('eV'):.2f}, u_cv={result.x[0]:.2f} with max efficiency {-result.fun*100:.8f}%.")
+        return -result.fun * 100
+    # otherwise return 0 efficiency
+    else:
+        print(f"Failed optimization for E_g={E_g.m_as('eV'):.2f}, "
+              f"E_i={E_i.m_as('eV'):.2f}. Returning 0%.")
+        return 0
+
+def optimize_point(args):
+
+    # unpack args
+    i, j, E_g, E_i, int_max, T_cell, T_sun, fX = args
+
+    # Check if E_i is less than E_g
+    if E_i < 0.99 * E_g:
+        # perform optimization
+        eff = Optimize(E_g * eV, E_i * eV, int_max, T_cell, T_sun, fX)
+        return (i, j, eff)
+    return (i, j, 0)
+
+def parallelization(args, cplx):
+    # Set number of workers (using slightly fewer than CPU cores is good practice)
+    n_workers = 10
+    
+    # Create array for results
+    efficiencies = np.zeros((cplx, cplx))
+    
+    # Create process pool once and use it for all processing
+    with ProcessPoolExecutor(max_workers=n_workers) as executor:
+        # Process all args in one go
+        results = list(executor.map(optimize_point, args))
+        
+        # Store results in efficiency array
+        for i, j, eff in results:
+            efficiencies[i, j] = eff
+            
+    return efficiencies
+
+def extrapolate(E_g, E_i, efficiencies):
+    
+    count = 0
+
+    # loop over all points to find zeros
+    for i in range(len(E_i)):
+        for j in range(len(E_g)):
+            if efficiencies[i, j] == 0 and E_i[i] < 0.99 * E_g[j]:
+                # find nearest non-zero neighbors
+                count += 1
+                neighbors = []
+                for di in [-1, 0, 1]:
+                    for dj in [-1, 0, 1]:
+                        ni, nj = i + di, j + dj
+                        if 0 <= ni < len(E_i) and 0 <= nj < len(E_g) and efficiencies[ni, nj] != 0:
+                            neighbors.append(efficiencies[ni, nj])
+                # average neighbors if any found
+                if neighbors:
+                    efficiencies[i, j] = np.mean(neighbors)
+
+    print(count, " zeros extrapolated out of ", cplx * cplx, " points.")
+
+    return efficiencies
+
+if __name__ == '__main__':
+    # concentration factor
+    X = 46200
+    # solid angle factor
+    f = 1/46200
+    # combined factor
+    fX = f * X
+
+    # maximum energy for integration
+    int_max = 10 * eV
+
+    # complexity of the grid
+    cplx = 20
+
+    # arrays of conduction band energies and intermediate band energies
+    E_g = np.linspace(0.5, 4.5, cplx)
+    E_i = np.linspace(0.1, 4.5, cplx)
+
+
+    # create array for efficiencies
+    efficiencies = np.zeros((len(E_g), len(E_i)))
+
+    print("Starting optimization...")
+
+    # for parallelization, each set of values is packed into a 2D array
+    args = []
+    for i in range(len(E_i)):
+        for j in range(len(E_g)):
+            args.append((i, j, E_g[j], E_i[i], int_max, T_cell, T_sun, fX))
+
+    # call the parallelization function to begin optimization
+    efficiencies = parallelization(args, cplx)
+
+    # extrapolate to fill in zero efficiency points (to make the graph look nice)
+    efficiencies = extrapolate(E_g, E_i, efficiencies)
+
+    # print maximum efficiency and corresponding energies
+    E_g_max = E_g[np.unravel_index(np.argmax(efficiencies), efficiencies.shape)[1]]
+    E_i_max = E_i[np.unravel_index(np.argmax(efficiencies), efficiencies.shape)[0]]
+    print(f"Max efficiency: {np.max(efficiencies):.2f}% at E_g = {E_g_max:.2f} eV, E_i = {E_i_max:.2f} eV")
+
+    # create figure
+    plt.figure(figsize=(10, 10))
+    
+    # create meshgrid for plotting
+    mesh = plt.pcolormesh(E_g, E_i, efficiencies, shading='auto', cmap='hot')
+    
+    # Add peak marker
+    plt.plot(E_g_max, E_i_max, 'ko', markersize=15, label=f'Peak: {np.max(efficiencies):.2f}%')
+    
+    # plotting accessories
+    plt.colorbar(mesh, label='Efficiency (%)')
+    plt.xlabel('E_g (eV)')
+    plt.ylabel('E_i (eV)')
+    plt.title('Intermediate Band Solar Cell Efficiency Map')
+    plt.show()

@@ -1,0 +1,236 @@
+2025-11-11 19:55:00 main         INFO     NUM_MESH_POINTS: 67
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration   1; |b| 8.522929e+01, |du/u| 5.152416e+01, |du/(a*u+c)| 2.728795e+05
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration   2; |b| 5.995621e+01, |du/u| 2.580831e+01, |du/(a*u+c)| 2.796597e+05
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration   3; |b| 4.279035e+01, |du/u| 1.727217e+01, |du/(a*u+c)| 2.896433e+05
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration   4; |b| 3.113103e+01, |du/u| 1.306179e+01, |du/(a*u+c)| 3.043430e+05
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration   5; |b| 2.321185e+01, |du/u| 1.065839e+01, |du/(a*u+c)| 3.259863e+05
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration   6; |b| 1.417964e+01, |du/u| 7.977823e+00, |du/(a*u+c)| 3.578488e+05
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration   7; |b| 1.001278e+01, |du/u| 7.553491e+00, |du/(a*u+c)| 4.738398e+05
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration   8; |b| 8.090469e+00, |du/u| 9.282330e+00, |du/(a*u+c)| 7.252663e+05
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration   9; |b| 7.203643e+00, |du/u| 1.375114e+01, |du/(a*u+c)| 1.270261e+06
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  10; |b| 6.794520e+00, |du/u| 2.300142e+01, |du/(a*u+c)| 2.451592e+06
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  11; |b| 6.605778e+00, |du/u| 4.149433e+01, |du/(a*u+c)| 5.012233e+06
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  12; |b| 6.518706e+00, |du/u| 7.824103e+01, |du/(a*u+c)| 1.056265e+07
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  13; |b| 6.478536e+00, |du/u| 1.514229e+02, |du/(a*u+c)| 2.259368e+07
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  14; |b| 6.460004e+00, |du/u| 2.978404e+02, |du/(a*u+c)| 4.867198e+07
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  15; |b| 6.451455e+00, |du/u| 5.922603e+02, |du/(a*u+c)| 1.051990e+08
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  16; |b| 6.447511e+00, |du/u| 1.187132e+03, |du/(a*u+c)| 2.277262e+08
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  17; |b| 6.445692e+00, |du/u| 2.394332e+03, |du/(a*u+c)| 4.933145e+08
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  18; |b| 6.444852e+00, |du/u| 4.853817e+03, |du/(a*u+c)| 1.069000e+09
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  19; |b| 6.444465e+00, |du/u| 9.882340e+03, |du/(a*u+c)| 2.316850e+09
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  20; |b| 6.444286e+00, |du/u| 2.019597e+04, |du/(a*u+c)| 5.021671e+09
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  21; |b| 6.444204e+00, |du/u| 4.140991e+04, |du/(a*u+c)| 1.088461e+10
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  22; |b| 6.444166e+00, |du/u| 8.515709e+04, |du/(a*u+c)| 2.359302e+10
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  23; |b| 6.444148e+00, |du/u| 1.755832e+05, |du/(a*u+c)| 5.113948e+10
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  24; |b| 6.444140e+00, |du/u| 3.628916e+05, |du/(a*u+c)| 1.108475e+11
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  25; |b| 6.444137e+00, |du/u| 7.516082e+05, |du/(a*u+c)| 2.402570e+11
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  26; |b| 6.444135e+00, |du/u| 1.559440e+06, |du/(a*u+c)| 5.206309e+11
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  27; |b| 6.444134e+00, |du/u| 3.238031e+06, |du/(a*u+c)| 1.127020e+12
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  28; |b| 6.444134e+00, |du/u| 6.701963e+06, |du/(a*u+c)| 2.427829e+12
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  29; |b| 6.444133e+00, |du/u| 1.358502e+07, |du/(a*u+c)| 5.114151e+12
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  30; |b| 6.444133e+00, |du/u| 2.505696e+07, |du/(a*u+c)| 9.788579e+12
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  31; |b| 6.444133e+00, |du/u| 3.381945e+07, |du/(a*u+c)| 1.369182e+13
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  32; |b| 6.444133e+00, |du/u| 2.655953e+07, |du/(a*u+c)| 1.112970e+13
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  33; |b| 6.444133e+00, |du/u| 1.414519e+07, |du/(a*u+c)| 6.128317e+12
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  34; |b| 6.444132e+00, |du/u| 6.589986e+06, |du/(a*u+c)| 2.948621e+12
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  35; |b| 6.444131e+00, |du/u| 2.973831e+06, |du/(a*u+c)| 1.372824e+12
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  36; |b| 6.444128e+00, |du/u| 1.333594e+06, |du/(a*u+c)| 6.345631e+11
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  37; |b| 6.444121e+00, |du/u| 5.976484e+05, |du/(a*u+c)| 2.928618e+11
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  38; |b| 6.444107e+00, |du/u| 2.679721e+05, |du/(a*u+c)| 1.351161e+11
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  39; |b| 6.444075e+00, |du/u| 1.202395e+05, |du/(a*u+c)| 6.233334e+10
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  40; |b| 6.444008e+00, |du/u| 5.399121e+04, |du/(a*u+c)| 2.875585e+10
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  41; |b| 6.443861e+00, |du/u| 2.426075e+04, |du/(a*u+c)| 1.326564e+10
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  42; |b| 6.443544e+00, |du/u| 1.090870e+04, |du/(a*u+c)| 6.119619e+09
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  43; |b| 6.442855e+00, |du/u| 4.908042e+03, |du/(a*u+c)| 2.822988e+09
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  44; |b| 6.441363e+00, |du/u| 2.209447e+03, |du/(a*u+c)| 1.302173e+09
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  45; |b| 6.438128e+00, |du/u| 9.950775e+02, |du/(a*u+c)| 6.005847e+08
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  46; |b| 6.431117e+00, |du/u| 4.482840e+02, |du/(a*u+c)| 2.769250e+08
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  47; |b| 6.415918e+00, |du/u| 2.019408e+02, |du/(a*u+c)| 1.276130e+08
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  48; |b| 6.382973e+00, |du/u| 9.089914e+01, |du/(a*u+c)| 5.873183e+07
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  49; |b| 6.311560e+00, |du/u| 4.082227e+01, |du/(a*u+c)| 2.695528e+07
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  50; |b| 6.156764e+00, |du/u| 1.822993e+01, |du/(a*u+c)| 1.229599e+07
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  51; |b| 5.821223e+00, |du/u| 8.034659e+00, |du/(a*u+c)| 5.533317e+06
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  52; |b| 5.093895e+00, |du/u| 3.433844e+00, |du/(a*u+c)| 2.413534e+06
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  53; |b| 3.517315e+00, |du/u| 1.358766e+00, |du/(a*u+c)| 9.743055e+05
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  54; |b| 9.987352e-02, |du/u| 4.244290e-01, |du/(a*u+c)| 3.103577e+05
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  55; |b| 7.902631e-04, |du/u| 5.557601e-03, |du/(a*u+c)| 4.065521e+03
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  56; |b| 4.844824e-08, |du/u| 4.328856e-05, |du/(a*u+c)| 3.166655e+01
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  57; |b| 1.347690e-14, |du/u| 2.654195e-09, |du/(a*u+c)| 1.941603e-03
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  58; |b| 1.347690e-14, |du/u| 1.951183e-15, |du/(a*u+c)| 9.750516e-10
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  59; |b| 1.347690e-14, |du/u| 1.951183e-15, |du/(a*u+c)| 9.750516e-10
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  60; |b| 1.347690e-14, |du/u| 1.951183e-15, |du/(a*u+c)| 9.750516e-10
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  61; |b| 1.347690e-14, |du/u| 1.951183e-15, |du/(a*u+c)| 9.750516e-10
+2025-11-11 19:55:16 newton.ntrl  INFO     * iteration  62; |b| 1.347690e-14, |du/u| 1.951183e-15, |du/(a*u+c)| 9.750516e-10
+2025-11-11 19:55:50 newton.thmq  INFO     * iteration   1; |b| 2.288427e+00, |du/u| 2.303563e+02, |du/(a*u+c)| 1.966376e+05
+2025-11-11 19:55:50 newton.thmq  INFO     * iteration   2; |b| 1.145204e+00, |du/u| 5.484987e+01, |du/(a*u+c)| 1.231679e+05
+2025-11-11 19:55:50 newton.thmq  INFO     * iteration   3; |b| 5.726056e-01, |du/u| 6.594423e+01, |du/(a*u+c)| 8.370227e+04
+2025-11-11 19:55:50 newton.thmq  INFO     * iteration   4; |b| 2.863029e-01, |du/u| 4.947620e+01, |du/(a*u+c)| 5.370006e+04
+2025-11-11 19:55:50 newton.thmq  INFO     * iteration   5; |b| 1.431515e-01, |du/u| 3.808134e+03, |du/(a*u+c)| 3.151802e+04
+2025-11-11 19:55:50 newton.thmq  INFO     * iteration   6; |b| 1.606093e-02, |du/u| inf, |du/(a*u+c)| 1.605254e+04
+2025-11-11 19:55:50 newton.thmq  INFO     * iteration   7; |b| 8.928481e-05, |du/u| 8.379521e+00, |du/(a*u+c)| 1.402711e+03
+2025-11-11 19:55:50 newton.thmq  INFO     * iteration   8; |b| 2.114936e-09, |du/u| 6.057085e+01, |du/(a*u+c)| 7.124933e+00
+2025-11-11 19:55:50 newton.thmq  INFO     * iteration   9; |b| 8.417711e-12, |du/u| 9.974644e+00, |du/(a*u+c)| 1.594193e-04
+2025-11-11 19:55:50 newton.thmq  INFO     * iteration  10; |b| 9.312773e-12, |du/u| 4.904673e+00, |du/(a*u+c)| 1.958347e-08
+2025-11-11 19:55:50 newton.thmq  INFO     * iteration  11; |b| 1.233058e-11, |du/u| 2.310597e+01, |du/(a*u+c)| 2.276548e-08
+2025-11-11 19:55:50 newton.thmq  INFO     * iteration  12; |b| 8.748557e-12, |du/u| 5.984787e+00, |du/(a*u+c)| 2.642566e-08
+2025-11-11 19:55:50 newton.thmq  INFO     * iteration  13; |b| 1.549116e-11, |du/u| 5.122007e+00, |du/(a*u+c)| 1.605835e-08
+2025-11-11 19:55:50 newton.thmq  INFO     * iteration  14; |b| 1.106204e-11, |du/u| 1.290844e+01, |du/(a*u+c)| 1.630762e-08
+2025-11-11 19:55:50 newton.thmq  INFO     * iteration  15; |b| 8.649303e-12, |du/u| 6.126215e+00, |du/(a*u+c)| 3.612884e-08
+2025-11-11 19:55:50 newton.thmq  INFO     * iteration  16; |b| 9.295231e-12, |du/u| 7.383411e+00, |du/(a*u+c)| 1.990885e-08
+2025-11-11 19:55:50 newton.thmq  INFO     * iteration  17; |b| 7.993606e-12, |du/u| 5.385525e+00, |du/(a*u+c)| 2.546260e-08
+2025-11-11 19:55:51 newton.thmq  INFO     * iteration  18; |b| 1.094369e-11, |du/u| 1.758731e+01, |du/(a*u+c)| 1.932835e-08
+2025-11-11 19:55:51 newton.thmq  INFO     * iteration  19; |b| 9.876100e-12, |du/u| 5.129656e+00, |du/(a*u+c)| 1.898619e-08
+2025-11-11 19:55:51 newton.thmq  INFO     * iteration  20; |b| 8.081535e-12, |du/u| 1.026298e+01, |du/(a*u+c)| 3.093971e-08
+2025-11-11 19:55:51 newton.thmq  INFO     * iteration  21; |b| 7.670087e-12, |du/u| 2.503136e+01, |du/(a*u+c)| 4.182371e-08
+2025-11-11 19:55:51 newton.thmq  INFO     * iteration  22; |b| 1.038902e-11, |du/u| 9.467423e+00, |du/(a*u+c)| 3.770305e-08
+2025-11-11 19:55:51 newton.thmq  INFO     * iteration  23; |b| 1.042921e-11, |du/u| 7.020769e+00, |du/(a*u+c)| 2.903396e-08
+2025-11-11 19:55:51 newton.thmq  INFO     * iteration  24; |b| 1.308820e-11, |du/u| 1.112189e+01, |du/(a*u+c)| 2.658995e-08
+2025-11-11 19:56:23 root         INFO     %%%%%%%%%% adaptive solve parameter=0.0 step_size=0.1
+2025-11-11 19:57:14 newton       INFO     * iteration   1; |b| 1.271805e-11, |du/u| 1.681091e+15, |du/(a*u+c)| 4.010789e-08
+2025-11-11 19:57:14 newton       INFO     * iteration   2; |b| 8.399947e-12, |du/u| 1.197767e+15, |du/(a*u+c)| 2.496074e-08
+2025-11-11 19:57:14 newton       INFO     * iteration   3; |b| 8.564260e-12, |du/u| 1.424714e+15, |du/(a*u+c)| 1.333631e-09
+2025-11-11 19:57:14 newton       INFO     * iteration   4; |b| 1.139866e-11, |du/u| 3.013887e+15, |du/(a*u+c)| 1.062880e-09
+2025-11-11 19:57:15 newton       INFO     * iteration   5; |b| 9.523049e-12, |du/u| 1.677844e+15, |du/(a*u+c)| 1.408889e-09
+2025-11-11 19:57:15 newton       INFO     * iteration   6; |b| 5.590417e-12, |du/u| 4.178797e+15, |du/(a*u+c)| 1.567585e-09
+2025-11-11 19:57:15 stepper      INFO     Writing output
+2025-11-11 19:58:10 root         INFO     %%%%%%%%%% adaptive solve parameter=0.05 step_size=0.1
+2025-11-11 19:58:11 newton       INFO     * iteration   1; |b| 2.715303e-01, |du/u| 1.462416e+15, |du/(a*u+c)| 9.244724e+03
+2025-11-11 19:58:11 newton       INFO     * iteration   2; |b| 1.789127e-01, |du/u| 1.842303e+14, |du/(a*u+c)| 5.071388e+04
+2025-11-11 19:58:11 newton       INFO     * iteration   3; |b| 2.801736e-03, |du/u| 1.928361e+14, |du/(a*u+c)| 1.831918e+04
+2025-11-11 19:58:11 newton       INFO     * iteration   4; |b| 1.102818e-06, |du/u| 1.757124e+14, |du/(a*u+c)| 2.107328e+02
+2025-11-11 19:58:11 newton       INFO     * iteration   5; |b| 4.341860e-12, |du/u| 2.632862e+14, |du/(a*u+c)| 9.605254e-02
+2025-11-11 19:58:11 stepper      INFO     Writing output
+2025-11-11 19:58:13 root         INFO     %%%%%%%%%% adaptive solve parameter=0.1 step_size=0.1
+2025-11-11 19:58:14 newton       INFO     * iteration   1; |b| 2.715303e-01, |du/u| 2.988790e+09, |du/(a*u+c)| 9.244724e+03
+2025-11-11 19:58:14 newton       INFO     * iteration   2; |b| 1.789127e-01, |du/u| 1.953998e+14, |du/(a*u+c)| 5.071388e+04
+2025-11-11 19:58:14 newton       INFO     * iteration   3; |b| 2.801736e-03, |du/u| 1.762574e+14, |du/(a*u+c)| 1.831918e+04
+2025-11-11 19:58:14 newton       INFO     * iteration   4; |b| 1.102818e-06, |du/u| 2.031199e+14, |du/(a*u+c)| 2.107328e+02
+2025-11-11 19:58:15 newton       INFO     * iteration   5; |b| 7.494672e-12, |du/u| 4.360206e+13, |du/(a*u+c)| 9.605230e-02
+2025-11-11 19:58:15 stepper      INFO     Writing output
+2025-11-11 19:58:17 root         INFO     %%%%%%%%%% adaptive solve parameter=0.15000000000000002 step_size=0.1
+2025-11-11 19:58:17 newton       INFO     * iteration   1; |b| 2.715303e-01, |du/u| 5.614498e+08, |du/(a*u+c)| 9.244724e+03
+2025-11-11 19:58:17 newton       INFO     * iteration   2; |b| 1.789127e-01, |du/u| 1.804002e+14, |du/(a*u+c)| 5.071388e+04
+2025-11-11 19:58:17 newton       INFO     * iteration   3; |b| 2.801736e-03, |du/u| 1.777226e+14, |du/(a*u+c)| 1.831918e+04
+2025-11-11 19:58:18 newton       INFO     * iteration   4; |b| 1.102818e-06, |du/u| 2.058950e+14, |du/(a*u+c)| 2.107328e+02
+2025-11-11 19:58:18 newton       INFO     * iteration   5; |b| 9.100609e-12, |du/u| 8.406046e+13, |du/(a*u+c)| 9.605198e-02
+2025-11-11 19:58:18 stepper      INFO     Writing output
+2025-11-11 19:58:20 root         INFO     %%%%%%%%%% adaptive solve parameter=0.2 step_size=0.1
+2025-11-11 19:58:20 newton       INFO     * iteration   1; |b| 2.715303e-01, |du/u| 1.391769e+08, |du/(a*u+c)| 9.244724e+03
+2025-11-11 19:58:20 newton       INFO     * iteration   2; |b| 1.789127e-01, |du/u| 1.964894e+14, |du/(a*u+c)| 5.071388e+04
+2025-11-11 19:58:21 newton       INFO     * iteration   3; |b| 2.801736e-03, |du/u| 2.122997e+14, |du/(a*u+c)| 1.831918e+04
+2025-11-11 19:58:21 newton       INFO     * iteration   4; |b| 1.102818e-06, |du/u| 4.071867e+14, |du/(a*u+c)| 2.107328e+02
+2025-11-11 19:58:21 newton       INFO     * iteration   5; |b| 6.357470e-12, |du/u| 3.041734e+12, |du/(a*u+c)| 9.605238e-02
+2025-11-11 19:58:21 stepper      INFO     Writing output
+2025-11-11 19:58:23 root         INFO     %%%%%%%%%% adaptive solve parameter=0.25 step_size=0.1
+2025-11-11 19:58:23 newton       INFO     * iteration   1; |b| 2.715303e-01, |du/u| 4.116125e+07, |du/(a*u+c)| 9.244724e+03
+2025-11-11 19:58:24 newton       INFO     * iteration   2; |b| 1.789127e-01, |du/u| 4.841974e+14, |du/(a*u+c)| 5.071388e+04
+2025-11-11 19:58:24 newton       INFO     * iteration   3; |b| 2.801736e-03, |du/u| 2.498000e+14, |du/(a*u+c)| 1.831918e+04
+2025-11-11 19:58:24 newton       INFO     * iteration   4; |b| 1.102818e-06, |du/u| 1.213184e+14, |du/(a*u+c)| 2.107328e+02
+2025-11-11 19:58:24 newton       INFO     * iteration   5; |b| 8.573697e-12, |du/u| 1.192248e+12, |du/(a*u+c)| 9.605271e-02
+2025-11-11 19:58:24 stepper      INFO     Writing output
+2025-11-11 19:58:26 root         INFO     %%%%%%%%%% adaptive solve parameter=0.30000000000000004 step_size=0.1
+2025-11-11 19:58:26 newton       INFO     * iteration   1; |b| 2.715303e-01, |du/u| 1.323900e+07, |du/(a*u+c)| 9.244724e+03
+2025-11-11 19:58:27 newton       INFO     * iteration   2; |b| 1.789127e-01, |du/u| 2.007639e+14, |du/(a*u+c)| 5.071388e+04
+2025-11-11 19:58:27 newton       INFO     * iteration   3; |b| 2.801736e-03, |du/u| 1.792182e+14, |du/(a*u+c)| 1.831918e+04
+2025-11-11 19:58:27 newton       INFO     * iteration   4; |b| 1.102818e-06, |du/u| 5.198748e+14, |du/(a*u+c)| 2.107328e+02
+2025-11-11 19:58:27 newton       INFO     * iteration   5; |b| 6.422196e-12, |du/u| 1.288579e+12, |du/(a*u+c)| 9.605250e-02
+2025-11-11 19:58:27 stepper      INFO     Writing output
+2025-11-11 19:58:29 root         INFO     %%%%%%%%%% adaptive solve parameter=0.35000000000000003 step_size=0.1
+2025-11-11 19:58:30 newton       INFO     * iteration   1; |b| 2.715303e-01, |du/u| 4.386753e+06, |du/(a*u+c)| 9.244724e+03
+2025-11-11 19:58:30 newton       INFO     * iteration   2; |b| 1.789127e-01, |du/u| 2.573691e+14, |du/(a*u+c)| 5.071388e+04
+2025-11-11 19:58:30 newton       INFO     * iteration   3; |b| 2.801736e-03, |du/u| 3.804403e+13, |du/(a*u+c)| 1.831918e+04
+2025-11-11 19:58:30 newton       INFO     * iteration   4; |b| 1.102818e-06, |du/u| 5.764112e+14, |du/(a*u+c)| 2.107328e+02
+2025-11-11 19:58:31 newton       INFO     * iteration   5; |b| 7.213452e-12, |du/u| 8.239015e+10, |du/(a*u+c)| 9.605227e-02
+2025-11-11 19:58:31 stepper      INFO     Writing output
+2025-11-11 19:58:32 root         INFO     %%%%%%%%%% adaptive solve parameter=0.4 step_size=0.1
+2025-11-11 19:58:33 newton       INFO     * iteration   1; |b| 2.715303e-01, |du/u| 1.472919e+06, |du/(a*u+c)| 9.244724e+03
+2025-11-11 19:58:33 newton       INFO     * iteration   2; |b| 1.789127e-01, |du/u| 3.334893e+14, |du/(a*u+c)| 5.071388e+04
+2025-11-11 19:58:33 newton       INFO     * iteration   3; |b| 2.801736e-03, |du/u| 1.554304e+13, |du/(a*u+c)| 1.831918e+04
+2025-11-11 19:58:34 newton       INFO     * iteration   4; |b| 1.102818e-06, |du/u| 2.399226e+13, |du/(a*u+c)| 2.107328e+02
+2025-11-11 19:58:34 newton       INFO     * iteration   5; |b| 5.079825e-12, |du/u| 2.160718e+10, |du/(a*u+c)| 9.605195e-02
+2025-11-11 19:58:34 stepper      INFO     Writing output
+2025-11-11 19:58:36 root         INFO     %%%%%%%%%% adaptive solve parameter=0.45 step_size=0.1
+2025-11-11 19:58:36 newton       INFO     * iteration   1; |b| 2.715303e-01, |du/u| 4.877835e+05, |du/(a*u+c)| 9.244724e+03
+2025-11-11 19:58:36 newton       INFO     * iteration   2; |b| 1.789127e-01, |du/u| 1.031885e+15, |du/(a*u+c)| 5.071388e+04
+2025-11-11 19:58:37 newton       INFO     * iteration   3; |b| 2.801736e-03, |du/u| 3.816819e+12, |du/(a*u+c)| 1.831918e+04
+2025-11-11 19:58:37 newton       INFO     * iteration   4; |b| 1.102818e-06, |du/u| 7.729085e+12, |du/(a*u+c)| 2.107328e+02
+2025-11-11 19:58:37 newton       INFO     * iteration   5; |b| 3.652634e-12, |du/u| 9.520996e+09, |du/(a*u+c)| 9.605255e-02
+2025-11-11 19:58:37 stepper      INFO     Writing output
+2025-11-11 19:58:39 root         INFO     %%%%%%%%%% adaptive solve parameter=0.5 step_size=0.1
+2025-11-11 19:58:39 newton       INFO     * iteration   1; |b| 2.715303e-01, |du/u| 1.526632e+05, |du/(a*u+c)| 9.244724e+03
+2025-11-11 19:58:39 newton       INFO     * iteration   2; |b| 1.789127e-01, |du/u| 6.790162e+13, |du/(a*u+c)| 5.071388e+04
+2025-11-11 19:58:40 newton       INFO     * iteration   3; |b| 2.801736e-03, |du/u| 9.409055e+11, |du/(a*u+c)| 1.831918e+04
+2025-11-11 19:58:40 newton       INFO     * iteration   4; |b| 1.102817e-06, |du/u| 6.024815e+12, |du/(a*u+c)| 2.107328e+02
+2025-11-11 19:58:40 newton       INFO     * iteration   5; |b| 1.022116e-11, |du/u| 7.656766e+09, |du/(a*u+c)| 9.605236e-02
+2025-11-11 19:58:40 stepper      INFO     Writing output
+2025-11-11 19:58:42 root         INFO     %%%%%%%%%% adaptive solve parameter=0.55 step_size=0.1
+2025-11-11 19:58:42 newton       INFO     * iteration   1; |b| 2.715303e-01, |du/u| 4.262469e+04, |du/(a*u+c)| 9.244724e+03
+2025-11-11 19:58:42 newton       INFO     * iteration   2; |b| 1.789127e-01, |du/u| 3.578193e+13, |du/(a*u+c)| 5.071387e+04
+2025-11-11 19:58:43 newton       INFO     * iteration   3; |b| 2.801735e-03, |du/u| 1.977599e+11, |du/(a*u+c)| 1.831916e+04
+2025-11-11 19:58:43 newton       INFO     * iteration   4; |b| 1.102814e-06, |du/u| 8.223836e+12, |du/(a*u+c)| 2.107325e+02
+2025-11-11 19:58:43 newton       INFO     * iteration   5; |b| 4.412248e-12, |du/u| 1.273802e+10, |du/(a*u+c)| 9.605182e-02
+2025-11-11 19:58:43 stepper      INFO     Writing output
+2025-11-11 19:58:45 root         INFO     %%%%%%%%%% adaptive solve parameter=0.6000000000000001 step_size=0.1
+2025-11-11 19:58:45 newton       INFO     * iteration   1; |b| 2.715302e-01, |du/u| 9.985520e+03, |du/(a*u+c)| 9.244723e+03
+2025-11-11 19:58:46 newton       INFO     * iteration   2; |b| 1.789127e-01, |du/u| 1.761323e+13, |du/(a*u+c)| 5.071380e+04
+2025-11-11 19:58:46 newton       INFO     * iteration   3; |b| 2.801724e-03, |du/u| 3.465735e+10, |du/(a*u+c)| 1.831905e+04
+2025-11-11 19:58:46 newton       INFO     * iteration   4; |b| 1.102794e-06, |du/u| 1.376582e+12, |du/(a*u+c)| 2.107304e+02
+2025-11-11 19:58:46 newton       INFO     * iteration   5; |b| 6.916023e-12, |du/u| 1.805053e+09, |du/(a*u+c)| 9.605062e-02
+2025-11-11 19:58:46 stepper      INFO     Writing output
+2025-11-11 19:58:48 root         INFO     %%%%%%%%%% adaptive solve parameter=0.65 step_size=0.1
+2025-11-11 19:58:48 newton       INFO     * iteration   1; |b| 2.715295e-01, |du/u| 1.959121e+03, |du/(a*u+c)| 9.244720e+03
+2025-11-11 19:58:49 newton       INFO     * iteration   2; |b| 1.789128e-01, |du/u| 4.076466e+14, |du/(a*u+c)| 5.071328e+04
+2025-11-11 19:58:49 newton       INFO     * iteration   3; |b| 2.801647e-03, |du/u| 5.620901e+09, |du/(a*u+c)| 1.831828e+04
+2025-11-11 19:58:49 newton       INFO     * iteration   4; |b| 1.102656e-06, |du/u| 2.787853e+11, |du/(a*u+c)| 2.107163e+02
+2025-11-11 19:58:49 newton       INFO     * iteration   5; |b| 1.139355e-11, |du/u| 3.665252e+08, |du/(a*u+c)| 9.604049e-02
+2025-11-11 19:58:49 stepper      INFO     Writing output
+2025-11-11 19:58:51 root         INFO     %%%%%%%%%% adaptive solve parameter=0.7000000000000001 step_size=0.1
+2025-11-11 19:58:51 newton       INFO     * iteration   1; |b| 2.715246e-01, |du/u| 4.367017e+02, |du/(a*u+c)| 9.244695e+03
+2025-11-11 19:58:52 newton       INFO     * iteration   2; |b| 1.789139e-01, |du/u| 1.072250e+12, |du/(a*u+c)| 5.070973e+04
+2025-11-11 19:58:52 newton       INFO     * iteration   3; |b| 2.801120e-03, |du/u| 9.201792e+08, |du/(a*u+c)| 1.831299e+04
+2025-11-11 19:58:52 newton       INFO     * iteration   4; |b| 1.101702e-06, |du/u| 1.223309e+11, |du/(a*u+c)| 2.106185e+02
+2025-11-11 19:58:52 newton       INFO     * iteration   5; |b| 7.703505e-12, |du/u| 1.601777e+08, |du/(a*u+c)| 9.597206e-02
+2025-11-11 19:58:52 stepper      INFO     Writing output
+2025-11-11 19:58:54 root         INFO     %%%%%%%%%% adaptive solve parameter=0.75 step_size=0.1
+2025-11-11 19:58:54 newton       INFO     * iteration   1; |b| 2.714906e-01, |du/u| 1.597290e+02, |du/(a*u+c)| 9.244523e+03
+2025-11-11 19:58:55 newton       INFO     * iteration   2; |b| 1.789212e-01, |du/u| 2.322356e+11, |du/(a*u+c)| 5.068519e+04
+2025-11-11 19:58:55 newton       INFO     * iteration   3; |b| 2.797474e-03, |du/u| 2.066654e+08, |du/(a*u+c)| 1.827643e+04
+2025-11-11 19:58:55 newton       INFO     * iteration   4; |b| 1.095123e-06, |du/u| 1.107387e+11, |du/(a*u+c)| 2.099442e+02
+2025-11-11 19:58:55 newton       INFO     * iteration   5; |b| 5.693224e-12, |du/u| 1.491524e+08, |du/(a*u+c)| 9.550206e-02
+2025-11-11 19:58:55 stepper      INFO     Writing output
+2025-11-11 19:58:57 root         INFO     %%%%%%%%%% adaptive solve parameter=0.8 step_size=0.1
+2025-11-11 19:58:58 newton       INFO     * iteration   1; |b| 2.712555e-01, |du/u| 8.051335e+02, |du/(a*u+c)| 9.243337e+03
+2025-11-11 19:58:58 newton       INFO     * iteration   2; |b| 1.789719e-01, |du/u| 9.962760e+09, |du/(a*u+c)| 5.051626e+04
+2025-11-11 19:58:58 newton       INFO     * iteration   3; |b| 2.772454e-03, |du/u| 2.584135e+08, |du/(a*u+c)| 1.802767e+04
+2025-11-11 19:58:58 newton       INFO     * iteration   4; |b| 1.050806e-06, |du/u| 1.665382e+09, |du/(a*u+c)| 2.053757e+02
+2025-11-11 19:58:58 newton       INFO     * iteration   5; |b| 7.320200e-12, |du/u| 2.186259e+06, |du/(a*u+c)| 9.235292e-02
+2025-11-11 19:58:58 stepper      INFO     Writing output
+2025-11-11 19:59:00 root         INFO     %%%%%%%%%% adaptive solve parameter=0.8500000000000001 step_size=0.1
+2025-11-11 19:59:01 newton       INFO     * iteration   1; |b| 2.696315e-01, |du/u| 2.911726e+03, |du/(a*u+c)| 9.235166e+03
+2025-11-11 19:59:01 newton       INFO     * iteration   2; |b| 1.793228e-01, |du/u| 9.884920e+08, |du/(a*u+c)| 4.994723e+04
+2025-11-11 19:59:01 newton       INFO     * iteration   3; |b| 2.608283e-03, |du/u| 5.071904e+08, |du/(a*u+c)| 1.648091e+04
+2025-11-11 19:59:01 newton       INFO     * iteration   4; |b| 7.943617e-07, |du/u| 1.817315e+08, |du/(a*u+c)| 1.777939e+02
+2025-11-11 19:59:02 newton       INFO     * iteration   5; |b| 4.215073e-12, |du/u| 2.347834e+05, |du/(a*u+c)| 7.470874e-02
+2025-11-11 19:59:02 stepper      INFO     Writing output
+2025-11-11 19:59:03 root         INFO     %%%%%%%%%% adaptive solve parameter=0.9 step_size=0.1
+2025-11-11 19:59:04 newton       INFO     * iteration   1; |b| 2.585119e-01, |du/u| 1.378350e+02, |du/(a*u+c)| 9.180199e+03
+2025-11-11 19:59:04 newton       INFO     * iteration   2; |b| 4.002990e-01, |du/u| 5.381373e+08, |du/(a*u+c)| 4.994648e+04
+2025-11-11 19:59:04 newton       INFO     * iteration   3; |b| 8.955069e-03, |du/u| 4.425518e+07, |du/(a*u+c)| 1.044455e+04
+2025-11-11 19:59:04 newton       INFO     * iteration   4; |b| 3.608916e-06, |du/u| 2.300735e+07, |du/(a*u+c)| 8.788196e+01
+2025-11-11 19:59:04 newton       INFO     * iteration   5; |b| 1.926764e-12, |du/u| 2.833375e+04, |du/(a*u+c)| 3.461104e-02
+2025-11-11 19:59:04 stepper      INFO     Writing output
+2025-11-11 19:59:06 root         INFO     %%%%%%%%%% adaptive solve parameter=0.9500000000000001 step_size=0.1
+2025-11-11 19:59:07 newton       INFO     * iteration   1; |b| 1.864067e-01, |du/u| 1.719172e+02, |du/(a*u+c)| 8.859992e+03
+2025-11-11 19:59:07 newton       INFO     * iteration   2; |b| 1.972776e+00, |du/u| 5.094776e+08, |du/(a*u+c)| 4.994129e+04
+2025-11-11 19:59:07 newton       INFO     * iteration   3; |b| 6.564848e-02, |du/u| 3.748086e+06, |du/(a*u+c)| 4.537252e+03
+2025-11-11 19:59:07 newton       INFO     * iteration   4; |b| 9.517900e-05, |du/u| 2.674808e+06, |du/(a*u+c)| 8.794354e+01
+2025-11-11 19:59:07 newton       INFO     * iteration   5; |b| 2.917959e-10, |du/u| 7.512126e+03, |du/(a*u+c)| 1.369927e-01
+2025-11-11 19:59:07 stepper      INFO     Writing output
+2025-11-11 19:59:09 root         INFO     %%%%%%%%%% adaptive solve parameter=1.0 step_size=0.1
+2025-11-11 19:59:10 newton       INFO     * iteration   1; |b| 2.652726e-01, |du/u| 1.624281e+02, |du/(a*u+c)| 1.231943e+04
+2025-11-11 19:59:10 newton       INFO     * iteration   2; |b| 4.555327e+00, |du/u| 6.645032e+08, |du/(a*u+c)| 4.990659e+04
+2025-11-11 19:59:10 newton       INFO     * iteration   3; |b| 2.550984e-02, |du/u| 8.572552e+05, |du/(a*u+c)| 5.900075e+03
+2025-11-11 19:59:10 newton       INFO     * iteration   4; |b| 4.928316e-05, |du/u| 6.061758e+05, |du/(a*u+c)| 1.914978e+02
+2025-11-11 19:59:10 newton       INFO     * iteration   5; |b| 5.419674e-10, |du/u| 2.018592e+04, |du/(a*u+c)| 1.049505e+00
+2025-11-11 19:59:11 newton       INFO     * iteration   6; |b| 2.927283e-12, |du/u| 4.274019e+02, |du/(a*u+c)| 1.354861e-02
+2025-11-11 19:59:11 stepper      INFO     Writing output

@@ -1,0 +1,153 @@
+"""
+2D Solar Cell Efficiency Analysis
+
+This script imports efficiency calculation functions from 2D_Efficiency module
+and generates optimization plots for different concentration factors.
+"""
+
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.optimize import differential_evolution, minimize
+from pint import UnitRegistry
+
+# Simple import - add parent directory to path
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+
+# Now we can import normally
+import Eg_Efficiency as eff
+
+# Use constants from Eg_Efficiency module
+u = eff.u
+eV = eff.eV
+T_sun = eff.T_sun
+T_cell = eff.T_cell
+
+def Optimize(E_g, int_max, T_cell, T_sun, fX):
+    """Optimize efficiency using functions from Eg_Efficiency module."""
+    # Calculate power input once per optimization
+    P_in = eff.power_input(T_sun, int_max, fX)
+
+    # simplify E_g without units
+    E_g_val = E_g.m_as('eV')
+
+    # Bounds for approximating E_i and u_cv
+    rough_bounds = [
+        (0.01, 0.99 * E_g_val),   # E_i bounds
+        (0.01, 0.99 * E_g_val),   # u_cv bounds
+        (0.01, 0.99 * E_g_val),   # u_ci bounds
+    ]
+
+    # find a rough guess
+    guess = differential_evolution(
+        lambda x: eff.rough_efficiency(x, E_g, T_cell, T_sun, int_max, fX, P_in),
+        bounds=rough_bounds,
+        strategy='best1bin',
+        maxiter=500,
+        popsize=30,
+        tol=1e-2,
+        polish=False)
+
+    # bounds for finding exact values
+    bounds = [
+        (0.01, 0.99 * E_g_val),   # E_i bounds
+        (0.01, 0.99 * E_g_val),   # u_cv bounds
+    ]
+
+    # find the exact peak value
+    result = minimize(eff.efficiency, guess.x[:2],
+                args=(E_g, T_cell, T_sun, int_max, fX, P_in),
+                bounds=bounds, tol=1e-8,
+                method='SLSQP')
+
+    # output results if successful
+    if result.success and result.fun < 0:
+        print(f"Optimization successful for E_g={E_g_val}: Efficiency={-result.fun*100:.8f}%, E_i={result.x[0]:.8f} eV, u_cv={result.x[1]:.8f} eV")
+        return result.fun
+
+    # fallback to rough guess if optimization fails
+    elif guess.success and guess.fun < 0:
+        print(f"Optimization fell back to rough guess for E_g={E_g.m_as('eV')}: Efficiency={-guess.fun*100:.8f}%, E_i={guess.x[0]:.8f} eV, u_cv={guess.x[1]:.8f} eV")
+        return guess.fun
+    
+    # otherwise the optimization fails
+    else:
+        print(f"Optimization failed for E_g={E_g.m_as('eV')}")
+        return 0
+
+if __name__ == "__main__":
+
+    """This portion of this code defines the parameters you wish to use"""
+    cplx = 50
+    int_max = 100 * eV
+    E_g = u.Quantity(np.linspace(0.95, 4.5, cplx), 'eV')
+
+    # two different X-factors for two different plots
+    X1 = 1
+    X2 = 46200
+    f = 1/46200
+    
+    # Run optimization for X=1
+    fX1 = f * X1
+    print("Running optimization for one sun")
+    efficiencies_1 = np.zeros(cplx)
+    
+    for i in range(cplx):
+        efficiency_result = Optimize(E_g[i], int_max, T_cell, T_sun, fX1) # type: ignore
+        efficiencies_1[i] = -efficiency_result  # Convert back to positive
+
+    # Run optimization for X=46200
+    fX2 = f * X2
+    print("Running optimization for full concentration")
+    efficiencies_2 = np.zeros(cplx)
+    
+    for i in range(cplx):
+        efficiency_result = Optimize(E_g[i], int_max, T_cell, T_sun, fX2) # type: ignore
+        efficiencies_2[i] = -efficiency_result  # Convert back to positive
+
+    # Create a single figure with both results
+    plt.figure(figsize=(12, 8))
+    
+    # Plot curves
+    plt.plot(E_g.m_as('eV'), efficiencies_1 * 100, label='X=1', color='blue')
+    plt.plot(E_g.m_as('eV'), efficiencies_2 * 100, label='X=46200', color='red')
+
+    # Get E_g values for peak marking
+    E_g_values = E_g.m_as('eV')
+    
+    max_index1 = np.argmax(efficiencies_1)
+    max_eff1 = efficiencies_1[max_index1] * 100
+    max_eg1 = E_g_values[max_index1]
+    plt.annotate(f'Peak: {max_eff1:.4f}%',
+                (max_eg1, max_eff1),
+                textcoords="offset points",
+                xytext=(0, 20),
+                ha='center',
+                fontsize=10,
+                fontweight='bold',
+                bbox=dict(facecolor='white', alpha=0.8, edgecolor='blue'))
+    
+    # Find and mark peak efficiency for X=4600
+    max_index2 = np.argmax(efficiencies_2)
+    max_eff2 = efficiencies_2[max_index2] * 100
+    max_eg2 = E_g_values[max_index2]
+    plt.annotate(f'Peak: {max_eff2:.4f}%',
+                (max_eg2, max_eff2),
+                textcoords="offset points",
+                xytext=(0, 20),
+                ha='center',
+                fontsize=10,
+                fontweight='bold',
+                bbox=dict(facecolor='white', alpha=0.8, edgecolor='red'))
+    
+    # plotting
+    plt.xlabel('Bandgap Energy E_g (eV)')
+    plt.ylabel('Efficiency (%)')
+    plt.ylim(0, 70)
+    plt.title('Efficiency vs Bandgap Energy (E_g) for Different Concentration Factors')
+    plt.grid(True, alpha=0.3)
+    plt.legend(loc='best')
+    plt.figtext(0.15, 0.02, 'X=1: One sun concentration\nX=46200: Maximum solar concentration', 
+                fontsize=9, bbox=dict(facecolor='white', alpha=0.7))
+    plt.show()

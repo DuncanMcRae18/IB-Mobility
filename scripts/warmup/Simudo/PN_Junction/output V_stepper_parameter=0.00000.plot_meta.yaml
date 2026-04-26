@@ -1,0 +1,78 @@
+avg:current_CB:n_contact:
+  &id001 units: &id002 mA/cm^2
+  &id003 value: -1.0422393895146856e-19
+avg:current_CB:p_contact:
+  *id001: *id002
+  *id003: 0.0
+avg:current_CB:pn_junction:
+  *id001: *id002
+  *id003: -9.453308146953837e-20
+avg:current_VB:n_contact:
+  *id001: *id002
+  *id003: 8.242259275221526e-45
+avg:current_VB:p_contact:
+  *id001: *id002
+  *id003: -1.0414090815345411e-19
+avg:current_VB:pn_junction:
+  *id001: *id002
+  *id003: -9.606135113470414e-21
+avg:g_CB:nSi:
+  *id001: &id004 cm^-3/s
+  *id003: 2.4084035646534567
+avg:g_CB:pSi:
+  *id001: *id004
+  *id003: 23.664810095683645
+avg:g_VB:nSi:
+  *id001: *id004
+  *id003: 2.4084035646534567
+avg:g_VB:pSi:
+  *id001: *id004
+  *id003: 23.664810095683645
+band_info:CB:sign:
+  *id003: -1
+band_info:VB:sign:
+  *id003: 1
+sweep_parameter:parameter:
+  *id003: 0.0
+tot:current_CB:n_contact:
+  *id001: &id005 mA
+  *id003: -1.0422393895146854e-27
+tot:current_CB:p_contact:
+  *id001: *id005
+  *id003: 0.0
+tot:current_CB:pn_junction:
+  *id001: *id005
+  *id003: -9.453308146953835e-28
+tot:current_VB:n_contact:
+  *id001: *id005
+  *id003: 8.242259275221525e-53
+tot:current_VB:p_contact:
+  *id001: *id005
+  *id003: -1.041409081534541e-27
+tot:current_VB:pn_junction:
+  *id001: *id005
+  *id003: -9.606135113470413e-29
+tot:g_CB:nSi:
+  *id001: &id006 1/s
+  *id003: 6.021008911633641e-13
+tot:g_CB:pSi:
+  *id001: *id006
+  *id003: 5.916202523920909e-12
+tot:g_SRH_CB:nSi:
+  *id001: *id006
+  *id003: 6.021008911633641e-13
+tot:g_SRH_CB:pSi:
+  *id001: *id006
+  *id003: 5.916202523920909e-12
+tot:g_SRH_VB:nSi:
+  *id001: *id006
+  *id003: 6.021008911633641e-13
+tot:g_SRH_VB:pSi:
+  *id001: *id006
+  *id003: 5.916202523920909e-12
+tot:g_VB:nSi:
+  *id001: *id006
+  *id003: 6.021008911633641e-13
+tot:g_VB:pSi:
+  *id001: *id006
+  *id003: 5.916202523920909e-12

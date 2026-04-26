@@ -1,0 +1,94 @@
+avg:current_CB:n_contact:
+  &id001 units: &id002 mA/cm^2
+  &id003 value: 0.0008485141339904865
+avg:current_CB:p_contact:
+  *id001: *id002
+  *id003: 0.0
+avg:current_CB:pn_junction:
+  *id001: *id002
+  *id003: 0.000832485083183347
+avg:current_VB:n_contact:
+  *id001: *id002
+  *id003: -7.228278632169704e-28
+avg:current_VB:p_contact:
+  *id001: *id002
+  *id003: 0.0008485141340192264
+avg:current_VB:pn_junction:
+  *id001: *id002
+  *id003: 1.6029050835882584e-05
+avg:g_CB:nSi:
+  *id001: &id004 cm^-3/s
+  *id003: -4001819017007758.0
+avg:g_CB:pSi:
+  *id001: *id004
+  *id003: -2.078384880759005e+17
+avg:g_VB:nSi:
+  *id001: *id004
+  *id003: -4001819017007758.0
+avg:g_VB:pSi:
+  *id001: *id004
+  *id003: -2.078384880759005e+17
+band_info:CB:sign:
+  *id003: -1
+band_info:VB:sign:
+  *id003: 1
+sweep_parameter:parameter:
+  *id003: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - f8
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - &id005 null
+    - *id005
+    - *id005
+    - -1
+    - -1
+    - 0
+  - !!binary |
+    AAAAAAAA0D8=
+tot:current_CB:n_contact:
+  *id001: &id006 mA
+  *id003: 8.485141339904864e-12
+tot:current_CB:p_contact:
+  *id001: *id006
+  *id003: 0.0
+tot:current_CB:pn_junction:
+  *id001: *id006
+  *id003: 8.32485083183347e-12
+tot:current_VB:n_contact:
+  *id001: *id006
+  *id003: -7.228278632169703e-36
+tot:current_VB:p_contact:
+  *id001: *id006
+  *id003: 8.485141340192263e-12
+tot:current_VB:pn_junction:
+  *id001: *id006
+  *id003: 1.6029050835882582e-13
+tot:g_CB:nSi:
+  *id001: &id007 1/s
+  *id003: -1000.4547542519393
+tot:g_CB:pSi:
+  *id001: *id007
+  *id003: -51959.62201897511
+tot:g_SRH_CB:nSi:
+  *id001: *id007
+  *id003: -1000.4547542519393
+tot:g_SRH_CB:pSi:
+  *id001: *id007
+  *id003: -51959.62201897511
+tot:g_SRH_VB:nSi:
+  *id001: *id007
+  *id003: -1000.4547542519393
+tot:g_SRH_VB:pSi:
+  *id001: *id007
+  *id003: -51959.62201897511
+tot:g_VB:nSi:
+  *id001: *id007
+  *id003: -1000.4547542519393
+tot:g_VB:pSi:
+  *id001: *id007
+  *id003: -51959.62201897511
