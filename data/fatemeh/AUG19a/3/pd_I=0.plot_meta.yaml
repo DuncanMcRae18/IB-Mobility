@@ -1,0 +1,368 @@
+avg:current_CB:n_contact:
+  &id001 units: &id002 mA/cm^2
+  &id003 value: 2.1110094679518017e-22
+avg:current_CB:p_contact:
+  *id001: *id002
+  *id003: 0.0
+avg:current_IB:n_contact:
+  *id001: *id002
+  *id003: 0.0
+avg:current_IB:p_contact:
+  *id001: *id002
+  *id003: 0.0
+avg:current_VB:n_contact:
+  *id001: *id002
+  *id003: -5.934729841099875e-56
+avg:current_VB:p_contact:
+  *id001: *id002
+  *id003: -3.8790610874354997e-22
+avg:g_CB:I:
+  *id001: &id004 cm^-3/s
+  *id003: 0.0009509815513714752
+avg:g_CB:fsf:
+  *id001: *id004
+  *id003: 0.0
+avg:g_CB:n:
+  *id001: *id004
+  *id003: 5.168974361518293e-15
+avg:g_CB:p:
+  *id001: *id004
+  *id003: 5.148182747091013e-15
+avg:g_IB:I:
+  *id001: *id004
+  *id003: -4.662107725229363e-12
+avg:g_IB:fsf:
+  *id001: *id004
+  *id003: 0.0
+avg:g_IB:n:
+  *id001: *id004
+  *id003: 0.0
+avg:g_IB:p:
+  *id001: *id004
+  *id003: 0.0
+avg:g_VB:I:
+  *id001: *id004
+  *id003: 0.0009509815467093674
+avg:g_VB:fsf:
+  *id001: *id004
+  *id003: 0.0
+avg:g_VB:n:
+  *id001: *id004
+  *id003: 5.168974361518293e-15
+avg:g_VB:p:
+  *id001: *id004
+  *id003: 5.148182747091013e-15
+band_info:CB:sign:
+  *id003: -1
+band_info:IB:sign:
+  *id003: -1
+band_info:VB:sign:
+  *id003: 1
+sweep_parameter:I:
+  *id003: 0.0
+tot:current_CB:n_contact:
+  *id001: &id005 mA
+  *id003: 2.1110094679518014e-30
+tot:current_CB:p_contact:
+  *id001: *id005
+  *id003: 0.0
+tot:current_IB:n_contact:
+  *id001: *id005
+  *id003: 0.0
+tot:current_IB:p_contact:
+  *id001: *id005
+  *id003: 0.0
+tot:current_VB:n_contact:
+  *id001: *id005
+  *id003: -5.934729841099874e-64
+tot:current_VB:p_contact:
+  *id001: *id005
+  *id003: -3.879061087435499e-30
+tot:g_CB:I:
+  *id001: &id006 1/s
+  *id003: 3.803926205485901e-16
+tot:g_CB:fsf:
+  *id001: *id006
+  *id003: 0.0
+tot:g_CB:n:
+  *id001: *id006
+  *id003: 5.168974361518292e-27
+tot:g_CB:p:
+  *id001: *id006
+  *id003: 5.148182747091012e-27
+tot:g_IB:I:
+  *id001: *id006
+  *id003: -1.8648430900917454e-24
+tot:g_IB:fsf:
+  *id001: *id006
+  *id003: 0.0
+tot:g_IB:n:
+  *id001: *id006
+  *id003: 0.0
+tot:g_IB:p:
+  *id001: *id006
+  *id003: 0.0
+tot:g_VB:I:
+  *id001: *id006
+  *id003: 3.80392618683747e-16
+tot:g_VB:fsf:
+  *id001: *id006
+  *id003: 0.0
+tot:g_VB:n:
+  *id001: *id006
+  *id003: 5.168974361518292e-27
+tot:g_VB:p:
+  *id001: *id006
+  *id003: 5.148182747091012e-27
+tot:g_nr_bottom_CB:I:
+  *id001: *id006
+  *id003: 0.0
+tot:g_nr_bottom_CB:fsf:
+  *id001: *id006
+  *id003: 0.0
+tot:g_nr_bottom_CB:n:
+  *id001: *id006
+  *id003: 0.0
+tot:g_nr_bottom_CB:p:
+  *id001: *id006
+  *id003: 0.0
+tot:g_nr_bottom_IB:I:
+  *id001: *id006
+  *id003: 3.7916668017385835e-16
+tot:g_nr_bottom_IB:fsf:
+  *id001: *id006
+  *id003: 0.0
+tot:g_nr_bottom_IB:n:
+  *id001: *id006
+  *id003: 0.0
+tot:g_nr_bottom_IB:p:
+  *id001: *id006
+  *id003: 0.0
+tot:g_nr_bottom_VB:I:
+  *id001: *id006
+  *id003: 3.7916668017385835e-16
+tot:g_nr_bottom_VB:fsf:
+  *id001: *id006
+  *id003: 0.0
+tot:g_nr_bottom_VB:n:
+  *id001: *id006
+  *id003: 0.0
+tot:g_nr_bottom_VB:p:
+  *id001: *id006
+  *id003: 0.0
+tot:g_nr_top_CB:I:
+  *id001: *id006
+  *id003: 3.7646770395941033e-16
+tot:g_nr_top_CB:fsf:
+  *id001: *id006
+  *id003: 0.0
+tot:g_nr_top_CB:n:
+  *id001: *id006
+  *id003: 0.0
+tot:g_nr_top_CB:p:
+  *id001: *id006
+  *id003: 0.0
+tot:g_nr_top_IB:I:
+  *id001: *id006
+  *id003: -3.7646770395941033e-16
+tot:g_nr_top_IB:fsf:
+  *id001: *id006
+  *id003: 0.0
+tot:g_nr_top_IB:n:
+  *id001: *id006
+  *id003: 0.0
+tot:g_nr_top_IB:p:
+  *id001: *id006
+  *id003: 0.0
+tot:g_nr_top_VB:I:
+  *id001: *id006
+  *id003: 0.0
+tot:g_nr_top_VB:fsf:
+  *id001: *id006
+  *id003: 0.0
+tot:g_nr_top_VB:n:
+  *id001: *id006
+  *id003: 0.0
+tot:g_nr_top_VB:p:
+  *id001: *id006
+  *id003: 0.0
+tot:g_opt_ci_CB:I:
+  *id001: *id006
+  *id003: 3.924915507052169e-18
+tot:g_opt_ci_CB:fsf:
+  *id001: *id006
+  *id003: 0.0
+tot:g_opt_ci_CB:n:
+  *id001: *id006
+  *id003: 0.0
+tot:g_opt_ci_CB:p:
+  *id001: *id006
+  *id003: 0.0
+tot:g_opt_ci_IB:I:
+  *id001: *id006
+  *id003: -3.924915507052169e-18
+tot:g_opt_ci_IB:fsf:
+  *id001: *id006
+  *id003: 0.0
+tot:g_opt_ci_IB:n:
+  *id001: *id006
+  *id003: 0.0
+tot:g_opt_ci_IB:p:
+  *id001: *id006
+  *id003: 0.0
+tot:g_opt_ci_VB:I:
+  *id001: *id006
+  *id003: 0.0
+tot:g_opt_ci_VB:fsf:
+  *id001: *id006
+  *id003: 0.0
+tot:g_opt_ci_VB:n:
+  *id001: *id006
+  *id003: 0.0
+tot:g_opt_ci_VB:p:
+  *id001: *id006
+  *id003: 0.0
+tot:g_opt_cv_CB:I:
+  *id001: *id006
+  *id003: 2.063743252440226e-27
+tot:g_opt_cv_CB:fsf:
+  *id001: *id006
+  *id003: 0.0
+tot:g_opt_cv_CB:n:
+  *id001: *id006
+  *id003: 5.168974361518284e-27
+tot:g_opt_cv_CB:p:
+  *id001: *id006
+  *id003: 5.1481827470910056e-27
+tot:g_opt_cv_IB:I:
+  *id001: *id006
+  *id003: 0.0
+tot:g_opt_cv_IB:fsf:
+  *id001: *id006
+  *id003: 0.0
+tot:g_opt_cv_IB:n:
+  *id001: *id006
+  *id003: 0.0
+tot:g_opt_cv_IB:p:
+  *id001: *id006
+  *id003: 0.0
+tot:g_opt_cv_VB:I:
+  *id001: *id006
+  *id003: 2.063743252440226e-27
+tot:g_opt_cv_VB:fsf:
+  *id001: *id006
+  *id003: 0.0
+tot:g_opt_cv_VB:n:
+  *id001: *id006
+  *id003: 5.168974361518284e-27
+tot:g_opt_cv_VB:p:
+  *id001: *id006
+  *id003: 5.1481827470910056e-27
+tot:g_opt_iv_CB:I:
+  *id001: *id006
+  *id003: 0.0
+tot:g_opt_iv_CB:fsf:
+  *id001: *id006
+  *id003: 0.0
+tot:g_opt_iv_CB:n:
+  *id001: *id006
+  *id003: 0.0
+tot:g_opt_iv_CB:p:
+  *id001: *id006
+  *id003: 0.0
+tot:g_opt_iv_IB:I:
+  *id001: *id006
+  *id003: 1.2259385078245097e-18
+tot:g_opt_iv_IB:fsf:
+  *id001: *id006
+  *id003: 0.0
+tot:g_opt_iv_IB:n:
+  *id001: *id006
+  *id003: 0.0
+tot:g_opt_iv_IB:p:
+  *id001: *id006
+  *id003: 0.0
+tot:g_opt_iv_VB:I:
+  *id001: *id006
+  *id003: 1.2259385078245097e-18
+tot:g_opt_iv_VB:fsf:
+  *id001: *id006
+  *id003: 0.0
+tot:g_opt_iv_VB:n:
+  *id001: *id006
+  *id003: 0.0
+tot:g_opt_iv_VB:p:
+  *id001: *id006
+  *id003: 0.0
+tot:gabs_forward_ci:I:
+  *id001: *id006
+  *id003: 0.0
+tot:gabs_forward_ci:fsf:
+  *id001: *id006
+  *id003: 0.0
+tot:gabs_forward_ci:n:
+  *id001: *id006
+  *id003: 0.0
+tot:gabs_forward_ci:p:
+  *id001: *id006
+  *id003: 0.0
+tot:gabs_forward_cv:I:
+  *id001: *id006
+  *id003: 0.0
+tot:gabs_forward_cv:fsf:
+  *id001: *id006
+  *id003: 0.0
+tot:gabs_forward_cv:n:
+  *id001: *id006
+  *id003: 0.0
+tot:gabs_forward_cv:p:
+  *id001: *id006
+  *id003: 0.0
+tot:gabs_forward_iv:I:
+  *id001: *id006
+  *id003: 0.0
+tot:gabs_forward_iv:fsf:
+  *id001: *id006
+  *id003: 0.0
+tot:gabs_forward_iv:n:
+  *id001: *id006
+  *id003: 0.0
+tot:gabs_forward_iv:p:
+  *id001: *id006
+  *id003: 0.0
+tot:gother_forward_ci:I:
+  *id001: *id006
+  *id003: 0.0
+tot:gother_forward_ci:fsf:
+  *id001: *id006
+  *id003: 0.0
+tot:gother_forward_ci:n:
+  *id001: *id006
+  *id003: 0.0
+tot:gother_forward_ci:p:
+  *id001: *id006
+  *id003: 0.0
+tot:gother_forward_cv:I:
+  *id001: *id006
+  *id003: 0.0
+tot:gother_forward_cv:fsf:
+  *id001: *id006
+  *id003: 0.0
+tot:gother_forward_cv:n:
+  *id001: *id006
+  *id003: 0.0
+tot:gother_forward_cv:p:
+  *id001: *id006
+  *id003: 0.0
+tot:gother_forward_iv:I:
+  *id001: *id006
+  *id003: 0.0
+tot:gother_forward_iv:fsf:
+  *id001: *id006
+  *id003: 0.0
+tot:gother_forward_iv:n:
+  *id001: *id006
+  *id003: 0.0
+tot:gother_forward_iv:p:
+  *id001: *id006
+  *id003: 0.0

@@ -1,0 +1,176 @@
+parameters:
+  CB_E: 2.0
+  FSF_thickness: 0.05
+  IB_E: &id004 1.2
+  &id005 IB_thickness: !!python/object/apply:numpy.core.multiarray.scalar
+  - &id003 !!python/object/apply:numpy.dtype
+    args:
+    - f8
+    - 0
+    - 1
+    state: !!python/tuple
+    - 3
+    - <
+    - &id001 null
+    - *id001
+    - *id001
+    - -1
+    - -1
+    - 0
+  - !!binary |
+    DTFB6sSmEEA=
+  NA: -1.0e+17
+  NC: &id002 2.0e+19
+  ND: 1.0e+17
+  NFSF: -1.0e+19
+  &id009 NI: 2.5e+17
+  NV: *id002
+  T: 300
+  Ts: 6000
+  VB_E: 0.0
+  V_exts:
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - *id003
+    - !!binary |
+      AAAAAAAAAAA=
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - *id003
+    - !!binary |
+      nMQgsHJosT8=
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - *id003
+    - !!binary |
+      nMQgsHJowT8=
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - *id003
+    - !!binary |
+      6iYxCKwcyj8=
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - *id003
+    - !!binary |
+      nMQgsHJo0T8=
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - *id003
+    - !!binary |
+      w/UoXI/C1T8=
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - *id003
+    - !!binary |
+      6iYxCKwc2j8=
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - *id003
+    - !!binary |
+      EVg5tMh23j8=
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - *id003
+    - !!binary |
+      nMQgsHJo4T8=
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - *id003
+    - !!binary |
+      MN0kBoGV4z8=
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - *id003
+    - !!binary |
+      w/UoXI/C5T8=
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - *id003
+    - !!binary |
+      Vg4tsp3v5z8=
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - *id003
+    - !!binary |
+      6iYxCKwc6j8=
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - *id003
+    - !!binary |
+      fj81XrpJ7D8=
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - *id003
+    - !!binary |
+      EVg5tMh27j8=
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - *id003
+    - !!binary |
+      UrgehetR8D8=
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - *id003
+    - !!binary |
+      nMQgsHJo8T8=
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - *id003
+    - !!binary |
+      5tAi2/l+8j8=
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - *id003
+    - !!binary |
+      MN0kBoGV8z8=
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - *id003
+    - !!binary |
+      eekmMQis9D8=
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - *id003
+    - !!binary |
+      w/UoXI/C9T8=
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - *id003
+    - !!binary |
+      DQIrhxbZ9j8=
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - *id003
+    - !!binary |
+      Vg4tsp3v9z8=
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - *id003
+    - !!binary |
+      oBov3SQG+T8=
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - *id003
+    - !!binary |
+      6iYxCKwc+j8=
+  - !!python/object/apply:numpy.core.multiarray.scalar
+    - *id003
+    - !!binary |
+      MzMzMzMz+z8=
+  &id011 X: 100
+  alpha_cv: 10000.0
+  epsilon_r: 13
+  experiment_folder: !!python/object/apply:pathlib.PosixPath
+  - testing optimization
+  f_0: 0.5
+  jv_curve: true
+  mesh_factor: *id004
+  mesh_max: 0.02
+  mesh_start: 0.005
+  &id010 mu_I: 500
+  mu_n: 500
+  mu_p: 500
+  multiplex_keys: *id001
+  multiprocess: false
+  multiprocess_pool: 4
+  n_thickness: &id006 1.0
+  optimize_bounds:
+  - 0.1
+  - 5
+  optimize_key: *id005
+  optimize_xtol: 0.01
+  output_filename: data.yaml
+  p_thickness: *id006
+  prefix: fourlayer
+  sc_band_diagram: false
+  sc_band_diagrams: true
+  &id012 sigma_opt_ci: &id007 3.0e-14
+  sigma_opt_iv: *id007
+  sigma_th_ci: &id008 5.0e-18
+  sigma_th_iv: *id008
+  simple_mobility_model: true
+  text: Example optimizing
+  title: fourlayerNI=2.5e+17mu_I=500X=100sigma_opt_ci=3e-14
+  title_keys:
+  - *id009
+  - *id010
+  - *id011
+  - *id012
+  vth_CB: &id013 20000000.0
+  vth_VB: *id013

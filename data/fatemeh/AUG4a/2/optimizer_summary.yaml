@@ -1,0 +1,21 @@
+IB_thickness: !!python/object/apply:numpy.core.multiarray.scalar
+- &id002 !!python/object/apply:numpy.dtype
+  args:
+  - f8
+  - 0
+  - 1
+  state: !!python/tuple
+  - 3
+  - <
+  - &id001 null
+  - *id001
+  - *id001
+  - -1
+  - -1
+  - 0
+- !!binary |
+  URzJqG3H9T8=
+eff: !!python/object/apply:numpy.core.multiarray.scalar
+- *id002
+- !!binary |
+  9bFdQa9W0j8=
