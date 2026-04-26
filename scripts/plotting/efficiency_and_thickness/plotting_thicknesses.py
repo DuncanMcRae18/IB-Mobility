@@ -3,16 +3,24 @@ import numpy as np
 import sqlite3 as sql
 import pandas as pd
 import os
-import yaml
+import itertools
 
-database_path = "/home/duncan/data/main/database/planck.db"
-plot_path = "/home/duncan/data/main/plots"
+# Paths
+database_path = "/home/duncan/data/repo/data/duncan_results.db"
+base_plot_path = "/home/duncan/data/repo/plots/thickness"
+indiv_path = os.path.join(base_plot_path, "plots")
+grid_path = os.path.join(base_plot_path, "subplots")
+
+# Ensure directories exist
+for p in [indiv_path, grid_path]:
+    if not os.path.exists(p):
+        os.makedirs(p)
 
 sqlite_connection = sql.connect(database_path)
 df = pd.read_sql_query("SELECT * FROM TOTAL", sqlite_connection)
 
-# Convert numeric columns from strings back to floats
-numeric_cols = ['CB_E', 'IB_thickness', 'mu_I', 'sigma_opt_ci', 'sigma_opt_iv', 'IB_E']
+# Data Cleaning
+numeric_cols = ['CB_E', 'IB_thickness', 'mu_I', 'sigma_opt_ci', 'sigma_opt_iv']
 for col in numeric_cols:
     if col in df.columns:
         df[col] = pd.to_numeric(df[col], errors='coerce')
@@ -23,33 +31,51 @@ opt_ci_vals = sorted(df['sigma_opt_ci'].unique())
 opt_iv_vals = sorted(df['sigma_opt_iv'].unique())
 
 def main():
+    font = 14
+    sigma_combinations = list(itertools.product(opt_ci_vals, opt_iv_vals))
+
     for Eg in CB_E_vals:
-        fig, axes = plt.subplots(2, 2, figsize=(14, 10))
-        axes = axes.flatten()
-        idx = 0
-        
-        for ci in opt_ci_vals:
-            for iv in opt_iv_vals:
-                ax = axes[idx]
-                subset = df[(df['CB_E'] == Eg) & (df['sigma_opt_ci'] == ci) & (df['sigma_opt_iv'] == iv)]
-                
-                # Plot each GCM as a separate line
-                for GCM in sorted(GCM_vals):
-                    subset_gcm = subset[subset['GCM'] == GCM].sort_values('mu_I')
-                    if not subset_gcm.empty:
-                        ax.plot(np.log(subset_gcm['mu_I']), subset_gcm['IB_thickness'], marker='o', linestyle='-', label=f'GCM={GCM}')
-                
-                ax.set_title(f'sigma_ci={ci:.1e}, sigma_iv={iv:.1e}', fontsize=11)
-                ax.set_xlabel('log(mu_I)', fontsize=10)
-                ax.set_ylabel('IB Thickness', fontsize=10)
-                ax.grid(True, alpha=0.3)
-                ax.legend(fontsize=9)
-                idx += 1
-        
-        fig.suptitle(f'Eg={Eg}', fontsize=14, fontweight='bold')
-        plt.tight_layout()
-        plt.savefig(os.path.join(plot_path, f'IB_thickness_Eg{Eg}.png'), dpi=150, bbox_inches='tight')
-        plt.close()
+        # --- GRID ---
+        fig_grid, axes = plt.subplots(2, 2, figsize=(14, 10), sharex=True, sharey=True)
+        fig_grid.suptitle(f'Optimized IB Thickness Grid ($E_g$ = {Eg} eV)', fontsize=18)
+        axes_flat = axes.flatten()
+
+        for idx, (ci, iv) in enumerate(sigma_combinations):
+            ax = axes_flat[idx]
+            subset = df[(df['CB_E'] == Eg) & (df['sigma_opt_ci'] == ci) & (df['sigma_opt_iv'] == iv)]
+            
+            # --- INDIVIDUAL ---
+            fig_ind, ax_ind = plt.subplots(figsize=(10, 6))
+            
+            for GCM in GCM_vals:
+                subset_gcm = subset[subset['GCM'] == GCM].sort_values('mu_I')
+                if not subset_gcm.empty:
+                    line_params = {'marker': 'o', 'linestyle': '-', 'label': f'$m_G$={GCM}'}
+                    ax.semilogx(subset_gcm['mu_I'], subset_gcm['IB_thickness'], markersize=4, **line_params)
+                    ax_ind.semilogx(subset_gcm['mu_I'], subset_gcm['IB_thickness'], **line_params)
+
+            # Individual Plot Finalize
+            ax_ind.set_title(f'$E_g$={Eg} eV | $\sigma_{{ci}}$={ci:.1e} | $\sigma_{{iv}}$={iv:.1e}', fontsize=font)
+            ax_ind.set_xlabel(r'$\mu_I$ ($cm^2/Vs$)', fontsize=font)
+            ax_ind.set_ylabel('IB Thickness ($\mu$m)', fontsize=font)
+            ax_ind.grid(True, alpha=0.3); ax_ind.legend(fontsize=font-2)
+            
+            ci_s = f'{ci:.1e}'.replace('-', 'm'); iv_s = f'{iv:.1e}'.replace('-', 'm')
+            fig_ind.savefig(os.path.join(indiv_path, f'thick_Eg{Eg}_ci{ci_s}_iv{iv_s}.png'), dpi=150)
+            plt.close(fig_ind)
+
+            # Subplot Grid Finalize
+            ax.set_title(f'$\sigma_{{ci}}$={ci:.1e}, $\sigma_{{iv}}$={iv:.1e}', fontsize=12)
+            ax.grid(True, alpha=0.3)
+            if idx == 0: ax.legend(fontsize=10)
+
+        # Grid Plot Finalize
+        fig_grid.text(0.5, 0.02, r'$\mu_I$ ($cm^2/Vs$)', ha='center', fontsize=16)
+        fig_grid.text(0.02, 0.5, 'IB Thickness ($\mu$m)', va='center', rotation='vertical', fontsize=16)
+        fig_grid.tight_layout(rect=[0.05, 0.05, 1, 0.95])
+        fig_grid.savefig(os.path.join(grid_path, f'thick_grid_Eg{Eg}.png'), dpi=200)
+        plt.close(fig_grid)
+        print(f"Completed Thickness suite for Eg={Eg}")
 
 if __name__ == "__main__":
     main()

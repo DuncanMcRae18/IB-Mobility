@@ -6,8 +6,8 @@ import matplotlib.pyplot as plt
 import h5py
 from pathlib import Path
 
-data_folder = '/home/duncan/data/main/data/duncan'
-plot_folder = '/home/duncan/data/main/plots/filling_fraction'
+data_folder = '/home/duncan/data/repo/data/duncan'
+plot_folder = '/home/duncan/data/repo/plots/filling_fraction/individual'
 
 def find_max_power_point(voltage_file):
     """Find voltage at maximum power point from IV curve."""

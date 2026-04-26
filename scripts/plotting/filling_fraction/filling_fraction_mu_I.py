@@ -7,8 +7,8 @@ import h5py
 from pathlib import Path
 from collections import defaultdict
 
-data_folder = '/home/duncan/data/main/data/duncan'
-plot_folder = '/home/duncan/data/main/plots/filling_fraction_mu_I'
+data_folder = '/home/duncan/data/repo/data/duncan'
+plot_folder = '/home/duncan/data/repo/plots/filling_fraction/mu_I'
 
 def find_max_power_point(voltage_file):
     """Find voltage at maximum power point from IV curve."""

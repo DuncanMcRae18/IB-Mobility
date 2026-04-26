@@ -7,8 +7,8 @@ import h5py
 from pathlib import Path
 from collections import defaultdict
 
-data_folder = '/home/duncan/data/main/data/duncan'
-plot_folder = '/home/duncan/data/main/plots/filling_fraction_sc'
+data_folder = '/home/duncan/data/repo/data/duncan'
+plot_folder = '/home/duncan/data/repo/plots/filling_fraction/sc'
 
 
 def load_filling_fraction(data_file):

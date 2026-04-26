@@ -6,9 +6,9 @@ from pathlib import Path
 from collections import defaultdict
 from simudo.example.fourlayer.sweep_extraction import SweepData
 
-data_folder1 = '/home/duncan/data/main/data/duncan/Eg_1.67/mu_I_0.001/ci_1.0e-13/iv_1.0e-13/GCM_0/0'
-data_folder2 = '/home/duncan/data/main/data/duncan/Eg_1.67/mu_I_30/ci_1.0e-13/iv_1.0e-13/GCM_0/0'
-plot_folder = '/home/duncan/data/main/plots/nr_diff'
+data_folder1 = '/home/duncan/data/repo/data/duncan/Eg_1.67/mu_I_0.001/ci_1.0e-13/iv_1.0e-13/GCM_0/0'
+data_folder2 = '/home/duncan/data/repo/data/duncan/Eg_1.67/mu_I_30/ci_1.0e-13/iv_1.0e-13/GCM_0/0'
+plot_folder = '/home/duncan/data/repo/plots/NR_recombination/diff'
 
 def plot(spatial001, spatial30):
     # spatial, IB_mask as returned by data.get_spatial_data and data.IB_mask

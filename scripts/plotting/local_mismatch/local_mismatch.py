@@ -6,8 +6,8 @@ from pathlib import Path
 from collections import defaultdict
 from simudo.example.fourlayer.sweep_extraction import SweepData
 
-data_folder = '/home/duncan/data/main/data/duncan'
-plot_folder = '/home/duncan/data/main/plots/optical_generation'
+data_folder = '/home/duncan/data/repo/data/duncan'
+plot_folder = '/home/duncan/data/repo/plots/local_mismatch/individual'
 
 
 def subgap_generation_mismatch_diagram(spatial, IB_mask, ax):
